@@ -4,7 +4,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Hello world updated'
+    return 'Hello 11'
+
+
+@app.route('/subpage/')
+def subpage():
+    return 'This is a subpage'
 
 
 if __name__ == '__main__':
