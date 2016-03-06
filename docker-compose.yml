@@ -1,0 +1,11 @@
+nginx:
+  image: roverdotcom/staging-nginx
+  ports:
+    - "8000:8000"
+  environment:
+    PORT: 8000
+    UPSTREAM_PORT: 8000
+  links:
+    - flask:app
+flask:
+  build: .
